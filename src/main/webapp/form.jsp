@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form id="login" method="post" action="form-result.jsp">
+	<form id="login" method="post" action="/demo/ServletDemo">
 		用户：<input type="text" name="username"><br>
 		密码：<input type="text" name="password"><br>
 		<input type="submit" value="登录">
