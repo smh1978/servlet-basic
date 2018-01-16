@@ -26,7 +26,7 @@ public class ServletDemo extends HttpServlet {
 	 * @see HttpServlet#service(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		// 获取用户名和密码
 		System.out.println(request.getParameter("username"));
 		System.out.println(request.getParameter("password"));
 		
