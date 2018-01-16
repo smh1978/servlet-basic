@@ -4,12 +4,22 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+  
   <servlet>
   	<servlet-name>servletDemo</servlet-name>
   	<servlet-class>servlet.demo.ServletDemo</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>drawCheckCode</servlet-name>
+  	<servlet-class>servlet.demo.CheckinDrawer</servlet-class>
+  </servlet>
+  
   <servlet-mapping>
   	<servlet-name>servletDemo</servlet-name>
   	<url-pattern>/ServletDemo</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>drawCheckCode</servlet-name>
+  	<url-pattern>/CheckinDrawer</url-pattern>
   </servlet-mapping>
 </web-app>

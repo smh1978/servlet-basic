@@ -7,12 +7,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form id="login" method="post" action="/demo/ServletDemo">
-		用户：<input type="text" name="username"><br>
-		密码：<input type="text" name="password"><br>
-		验证码：<input type="text" name="checkin"><br>
-		<img src="/demo/CheckinDrawer"><br/>
-		<input type="submit" value="登录">
-	</form>
+	<%
+		Cookie[] cookies = request.getCookies();
+		for(Cookie c: cookies) {
+			out.println(c.getName() + " " + c.getValue());
+			out.println("<br/>");
+		}
+ 	%>
 </body>
 </html>
