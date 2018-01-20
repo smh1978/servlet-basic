@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
+<%@ page import ="java.net.URLDecoder" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -10,7 +11,7 @@
 	<%
 		Cookie[] cookies = request.getCookies();
 		for(Cookie c: cookies) {
-			out.println(c.getName() + " " + c.getValue());
+			out.println(c.getName() + " " + URLDecoder.decode(c.getValue(),"UTF-8"));
 			out.println("<br/>");
 		}
  	%>
