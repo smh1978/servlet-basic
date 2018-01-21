@@ -14,10 +14,26 @@
   	<servlet-class>servlet.demo.CheckinDrawer</servlet-class>
   </servlet>
   <servlet>
-  	<servlet-name>HelloForm</servlet-name>
-  	<servlet-class>servlet.demo.HelloForm</servlet-class>
+  	<servlet-name>ParamServlet</servlet-name>
+  	<servlet-class>servletdemo.ParamServlet</servlet-class>
+  	<init-param>
+  		<param-name>driver</param-name>
+  		<param-value>com.mysql.jdbc.Driver</param-value>
+  	</init-param>
+  	<init-param>
+  		<param-name>url</param-name>
+  		<param-value>jdbc:mysql://localhost:3306/test</param-value>
+  	</init-param>
+  	<init-param>
+  		<param-name>user</param-name>
+  		<param-value>root</param-value>
+  	</init-param>
+  	<init-param>
+  		<param-name>pass</param-name>
+  		<param-value>001007</param-value>	
+  	</init-param>
   </servlet>
-  
+    
   <servlet-mapping>
   	<servlet-name>servletDemo</servlet-name>
   	<url-pattern>/ServletDemo</url-pattern>
@@ -27,7 +43,9 @@
   	<url-pattern>/CheckinDrawer</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-  	<servlet-name>HelloForm</servlet-name>
-  	<url-pattern>/HelloForm</url-pattern>
+  	<servlet-name>ParamServlet</servlet-name>
+  	<url-pattern>/ParamServlet</url-pattern>
   </servlet-mapping>
+  
+
 </web-app>
