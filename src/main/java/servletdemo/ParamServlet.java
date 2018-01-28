@@ -31,7 +31,7 @@ public class ParamServlet extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		System.out.println(request.getParameter("username"));
-		System.out.println(request.getParameter("pass"));
+//		System.out.println(request.getParameter("pass"));
 		
 //		ServletConfig config = getServletConfig();
 //		String driver = config.getInitParameter("driver");
