@@ -46,24 +46,15 @@ public class BaseDao {
 	}
 	
 	public ResultSet query (String sql, Object...args) throws SQLException, Exception {
-		System.out.println("sql:"+sql);
-		System.out.println("args.length:"+args.length);
-		
 		PreparedStatement pstmt = getConnection().prepareStatement(sql);
 		for (int i = 0; i < args.length; i++) {
 			String str = args[i].toString();
-			System.out.println("str:"+str);
+			System.out.println("str:" + str);
 			System.out.println("---------------------------------->"+URLEncoder.encode(str,"UTF-8"));
 			
-			
 //			pstmt.setObject(i + 1, URLEncoder.encode(str,"UTF-8"));	
-			
-			
-			pstmt.setObject(i + 1, str);	
-			
-			
-			
-			//pstmt.setObject(i + 1, args[i]);
+			pstmt.setObject(i + 1, str);		
+//			pstmt.setObject(i + 1, args[i]);
 		}
 		System.out.println(pstmt.toString());
 		return pstmt.executeQuery();

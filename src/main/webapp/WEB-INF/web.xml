@@ -3,7 +3,18 @@
  "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
 <web-app>
+
   <display-name>Archetype Created Web Application</display-name>
+
+  <filter>
+  	<filter-name>log</filter-name>
+  	<filter-class>servletdemo.LogFilter</filter-class>
+  </filter>
+  
+  <filter-mapping>
+  	<filter-name>log</filter-name>
+  	<servlet-name>*</servlet-name>
+  </filter-mapping>
   
   <servlet>
   	<servlet-name>servletDemo</servlet-name>
@@ -46,6 +57,5 @@
   	<servlet-name>ParamServlet</servlet-name>
   	<url-pattern>/ParamServlet</url-pattern>
   </servlet-mapping>
-  
 
 </web-app>
